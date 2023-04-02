@@ -1,5 +1,5 @@
 word = input('Введите название файла: ')
-if set(word) & set('@№$%^&*()'):
+if word.startswith(tuple("@№$%^&*()")):
   print('Ошибка: название начинается на один из специальных символов.')
 elif word.endswith('.txt'):
   print('Файл назван верно.')
