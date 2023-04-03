@@ -1,7 +1,7 @@
 while True:
     ip = input('Введите IP: ')
 
-    if len(ip.split(('.'))) < 4:
+    if len(ip.split(('.'))) > 4 or len(ip.split(('.'))) < 4:
         print('Адрес — это четыре числа, разделённые точками.')
     else:
         num_1 = 0
