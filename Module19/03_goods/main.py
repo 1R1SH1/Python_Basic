@@ -24,4 +24,11 @@ store = {
     ],
 }
 
-# TODO здесь писать код
+for x in goods:
+    key = goods[x]
+    calc = store[key]
+
+    each_count = sum(q['quantity'] for q in calc)
+    result = sum(p['quantity'] * p['price'] for p in calc)
+
+    print(f'{x} — {each_count} штук, ' 'стоимость {:2.0f} рубля.'.format(result))
