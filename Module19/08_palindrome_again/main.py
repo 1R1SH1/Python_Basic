@@ -2,8 +2,7 @@ word = input("Введите слово: ")
 list_word = list(word)
 index = len(list_word)
 
-
-def poli(string):
+def check_poli(string):
     k = set()
     a = 0
     count = 0
@@ -18,8 +17,18 @@ def poli(string):
                 k.remove(i)
             else:
                 k.add(i)
+
     print("Слово не является палиндромом")
     print(('Можно', 'Нельзя')[len(k) > 1], 'сделать полиндром')
 
+def poli(string):
+    k = set()
+    while True:
+      if word.isdigit() == False:
+        check_poli(word)
+        break
+      else:
+        print('Можно вводить только буквы!')
+        break
 
 poli(word)
