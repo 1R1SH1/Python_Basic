@@ -6,20 +6,25 @@ def check_poli(string):
     k = set()
     a = 0
     count = 0
-    for i in range(index // 2):
-        if list_word[i] == list_word[index - 1 - a]:
-            count += 1
-            a += 1
-        if count == index // 2:
-            print("Слово является палиндромом")
-        else:
-            if i in list_word:
-                k.remove(i)
+    if index > 1:
+        for i in range(index // 2):
+            if list_word[i] == list_word[index - 1 - a]:
+                count += 1
+                a += 1
+            if count == index // 2:
+                print("Слово является палиндромом")
             else:
-                k.add(i)
+                if i in list_word:
+                    k.remove(i)
+                else:
+                    k.add(i)
 
-    print("Слово не является палиндромом")
-    print(('Можно', 'Нельзя')[len(k) > 1], 'сделать полиндром')
+        print("Слово не является палиндромом")
+        print(('Можно', 'Нельзя')[len(k) > 1], 'сделать полиндром')
+    else:
+        print('Нужно вводить больше 1 буквы!')
+
+
 
 def poli(string):
     k = set()
@@ -32,3 +37,4 @@ def poli(string):
         break
 
 poli(word)
+
