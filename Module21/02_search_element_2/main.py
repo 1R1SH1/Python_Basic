@@ -20,8 +20,6 @@ def find_key(struct, key, depth, depth_2):
     for sub_struct in struct.values():
       if isinstance(sub_struct, dict):
         result = find_key(sub_struct, key, depth - 1, depth_2)
-      elif result:
-        break
       else:
         result = None
     return result
