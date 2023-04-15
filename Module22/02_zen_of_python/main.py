@@ -1,1 +1,2 @@
-# TODO здесь писать код
+with open('zen.txt', 'r') as f:
+    print(*f.readlines()[::-1])
