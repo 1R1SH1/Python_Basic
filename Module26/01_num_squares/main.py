@@ -18,8 +18,8 @@ class SquaresNumbers:
     elif self.__limit >= 1:
       if self.__counter > self.__limit:
         raise StopIteration
-        self.__first_elem += 1
-        return self.__first_elem * self.__first_elem
+    self.__first_elem += 1
+    return self.__first_elem * self.__first_elem
 
 def square_func(nums: int) -> Iterable[int]:
   for num in range(1, nums + 1):
