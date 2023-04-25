@@ -2,13 +2,13 @@ from typing import Callable, Any
 
 
 def how_are_you(func: Callable) -> Callable:
-    def wrapped_func() -> Any:
+    def wrapped_func(*args, **kwargs) -> Any:
         print('Как дела? '), input(' ')
         print('А у меня не очень! Ладно, держи свою функцию.')
+        result = func(*args, **kwargs)
+        return result
 
-        return func
-
-    return wrapped_func()
+    return wrapped_func
 
 
 @how_are_you
